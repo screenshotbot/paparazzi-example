@@ -26,3 +26,11 @@ buildscript {
     classpath 'app.cash.paparazzi:paparazzi-gradle-plugin'
   }
 }
+
+subprojects {
+  repositories {
+    mavenCentral()
+    google()
+    //mavenLocal()
+  }
+}
