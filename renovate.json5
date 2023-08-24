@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      // Compose compiler is tightly coupled to Kotlin version
+      "groupName": "Kotlin and Compose",
+      "matchPackagePrefixes": [
+        "androidx.compose.compiler",
+        "org.jetbrains.kotlin:kotlin",
+        "com.google.devtools.ksp"
+      ],
+    },
+    {
+      // Android Gradle Plugin is tightly coupled to its android/platform/tools/base dependencies
+      // LayoutLib intentionally omitted to be updated independently
+      "groupName": "Android Tools",
+      "matchPackagePrefixes": [
+        "com.android.tools:",
+        "com.android.tools.build:",
+      ],
+    }
+  ],
+}
