@@ -17,7 +17,6 @@ build1:
   script:
     - git remote # debugging
     - git fetch origin main # GitLab doesn't do this, and Screenshotbot needs it
-    - ./gen.sh
     - ./gradlew :sample:recordPaparazziDebug
     - curl https://screenshotbot.io/recorder.sh | sh
     - |
