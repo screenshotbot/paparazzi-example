@@ -28,4 +28,4 @@ build1:
         --main-branch master
   only:
     - merge_requests
-    - master
+    - main
