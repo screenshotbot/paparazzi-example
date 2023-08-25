@@ -19,8 +19,7 @@ build1:
       ~/screenshotbot/recorder \
         --verbose \
         --directory sample/src/test/snapshots/images/ \
-        --channel paparazzi-example \
-        --main-branch master
+        --channel paparazzi-example
   only:
     - merge_requests
     - main
