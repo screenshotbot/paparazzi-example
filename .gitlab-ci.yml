@@ -17,7 +17,7 @@ build1:
     - curl https://screenshotbot.io/recorder.sh | sh
     - |
       ~/screenshotbot/recorder \
-        --directory screenshots \
+        --directory sample/src/test/snapshots/images/ \
         --channel paparazzi-example \
         --main-branch master
   only:
