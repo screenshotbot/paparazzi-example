@@ -4,6 +4,7 @@
 # you can delete this line if you're not using Docker
 # image: gitlab/gitlab-runner:latest
 
+
 before_script:
   - apt-get update
   - apt-get install -y imagemagick exiftool fonts-freefont-ttf
