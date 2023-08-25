@@ -18,7 +18,7 @@ build1:
     - |
       ~/screenshotbot/recorder \
         --directory screenshots \
-        --channel fast-example-gitlab \
+        --channel paparazzi-example \
         --main-branch master
   only:
     - merge_requests
