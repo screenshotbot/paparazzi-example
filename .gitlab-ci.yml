@@ -2,7 +2,7 @@
 # see https://docs.gitlab.com/ee/ci/yaml/README.html for all available options
 
 # you can delete this line if you're not using Docker
-image: mobiledevops/android-sdk-image:33.0.2
+image: cimg/android:2022.08.1-node
 
 after_script:
   - echo "After script section"
