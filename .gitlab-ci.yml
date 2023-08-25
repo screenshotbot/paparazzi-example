@@ -2,12 +2,12 @@
 # see https://docs.gitlab.com/ee/ci/yaml/README.html for all available options
 
 # you can delete this line if you're not using Docker
-image: jangrewe/gitlab-ci-android
+image: openjdk:17-jdk
 
 
-before_script:
-  - apt-get update
-  - apt-get install -y openjdk-17-jre
+#before_script:
+#  - apt-get update
+#  - apt-get install -y openjdk-17-jre
 after_script:
   - echo "After script section"
   - echo "For example you might do some cleanup here"
