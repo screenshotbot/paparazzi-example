@@ -2,7 +2,7 @@
 # see https://docs.gitlab.com/ee/ci/yaml/README.html for all available options
 
 # you can delete this line if you're not using Docker
-image: cimg/android:2022.08.1-node
+image: cimg/android:2023.08.1-node
 
 after_script:
   - echo "After script section"
