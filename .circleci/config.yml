@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cimg/android:2022.08.1-node # gcloud is baked into this image
+        auth:
+          username: tdrhq
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    steps:
+      - checkout
+      - run:
+          name: Run tests
+          command: ./gradlew :sample:recordPaparazziDebug
+      - run:
+          name: Run screenshotbot
+          command: |
+            curl https://screenshotbot.io/recorder.sh | sh
+            ~/screenshotbot/recorder \
+               --directory sample/src/test/snapshots/images/ \
+               --channel paparazzi-example
