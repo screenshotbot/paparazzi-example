@@ -9,6 +9,7 @@ with [Screenshotbot](https://screenshotbot.io).
 See `.circleci/config.yml` to see the steps required for
 configuration.
 
+
 Roughly, you can use Paparazzi as-is: but instead of running Paparazzi
 in `verify` mode, we always run in in `record` mode, and keep the
 screenshots in your `.gitignore`.
