@@ -63,7 +63,7 @@ subprojects {
 
     plugins.withId('io.screenshotbot.plugin') {
         screenshotbot {
-            hostname "https://staging.screenshotbot.io"
+            //hostname "https://staging.screenshotbot.io"
         }
     }
 
