@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'app.cash.paparazzi'
+apply plugin: 'io.screenshotbot.plugin'
 
 android {
   namespace 'app.cash.paparazzi.sample'

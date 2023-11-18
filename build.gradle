@@ -1,11 +1,8 @@
-apply plugin: 'com.github.ben-manes.versions'
-
 buildscript {
   repositories {
     mavenCentral()
     google()
     gradlePluginPortal()
-    //mavenLocal()
   }
 
   dependencies {
@@ -25,16 +22,25 @@ buildscript {
   }
 }
 
+plugins {
+    id 'io.screenshotbot.plugin' version '1.6'
+}
+
+allprojects {
+
+}
+
 subprojects {
   version = property("VERSION_NAME") as String
 
-  repositories {
-    mavenCentral()
-    google()
-    //mavenLocal()
-  }
+    repositories {
+        mavenCentral()
+        google()
+        //mavenLocal()
+    }
 
-  tasks.withType(Test).configureEach {
+
+    tasks.withType(Test).configureEach {
     testLogging {
       events "passed", "failed", "skipped", "standardOut", "standardError"
       exceptionFormat "full"
@@ -53,7 +59,13 @@ subprojects {
     kotlinOptions {
       jvmTarget = libs.versions.javaTarget.get()
     }
-  }
+    }
+
+    plugins.withId('io.screenshotbot.plugin') {
+        screenshotbot {
+            hostname "https://staging.screenshotbot.io"
+        }
+    }
 
   plugins.withId('com.vanniktech.maven.publish') {
     publishing {
