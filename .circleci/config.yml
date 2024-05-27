@@ -13,9 +13,7 @@ jobs:
           name: Run tests
           command: ./gradlew :sample:recordPaparazziDebug
       - run:
-          name: Run screenshotbot
-          command: |
-            curl https://screenshotbot.io/recorder.sh | sh
-            ~/screenshotbot/recorder \
-               --directory sample/src/test/snapshots/images/ \
-               --channel paparazzi-example
+          name: Run screenshotbot on all sub-modules
+          # This Gradle task is created from the
+          # io.screenshotbot.gradle plugin.
+          command: ./gradlew recordAndVerifyPaparazziDebugScreenshotbotCI
