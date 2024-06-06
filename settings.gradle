@@ -3,7 +3,7 @@ pluginManagement {
         mavenLocal()
         gradlePluginPortal()
         maven {
-            url "/home/arnold/myLocal"
+            url "/home/arnold/builds/screenshotbot-gradle/localRepo"
         }
     }
 }
