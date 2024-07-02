@@ -1,6 +1,6 @@
 # Screenshotbot example with Paparazzi
 
-[![Screenshots](https://screenshotbot.io/badge?org=5fe2d92a7ceb64d41853c231&channel=paparazzi-example&branch=main)](https://screenshotbot.io/active-run?org=5fe2d92a7ceb64d41853c231&channel=paparazzi-example&branch=main)
+[![Screenshots](https://screenshotbot.io/badge?org=5fd16bcf4f4b3822fd0000e1&channel=paparazzi-example%3Asample&branch=main)](https://screenshotbot.io/active-run?org=5fd16bcf4f4b3822fd0000e1&channel=paparazzi-example%3Asample&branch=main)
 
 This repository is an example of how to integration
 [Paparazzi](https://github.com/cashapp/paparazzi)
