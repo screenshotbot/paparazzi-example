@@ -18,6 +18,7 @@ package app.cash.paparazzi.sample
 import android.widget.LinearLayout
 import app.cash.paparazzi.DeviceConfig.Companion.NEXUS_5
 import app.cash.paparazzi.DeviceConfig.Companion.PIXEL_3
+import com.android.resources.ScreenOrientation.LANDSCAPE
 import app.cash.paparazzi.Paparazzi
 import org.junit.Rule
 import org.junit.Test
