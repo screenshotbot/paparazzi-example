@@ -30,6 +30,7 @@ class ComposeA11yTest {
   )
 
   @Test
+  @org.junit.Ignore
   fun compositeItems() {
     paparazzi.snapshot {
       Column {

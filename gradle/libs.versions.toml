@@ -2,15 +2,15 @@
 agp = "8.1.1"
 androidTools = "31.1.1" # == 23.0.0 + agp version
 bytebuddy = "1.14.6"
-composeCompiler = "1.5.1"
+composeCompiler = "1.5.15"
 javaTarget = "11"
 jcodec = "0.2.5"
-kotlin = "1.9.0"
+kotlin = "1.9.25"
 ktlint = "0.50.0"
 moshi = "1.15.0"
 
 minSdk = "25"
-compileSdk = "33"
+compileSdk = "34"
 
 # Maps to this commit: https://android.googlesource.com/platform/prebuilts/studio/layoutlib/+/5e972ea
 layoutlib = "2022.3.1-5e972ea"
