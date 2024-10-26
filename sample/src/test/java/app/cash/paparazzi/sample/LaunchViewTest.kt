@@ -41,10 +41,11 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.material.Surface
 import androidx.compose.foundation.layout.Column
+import com.android.ide.common.rendering.api.SessionParams.RenderingMode.SHRINK
 
 class LaunchViewTest {
   @get:Rule
-  val paparazzi = Paparazzi(deviceConfig = PIXEL_3)
+  val paparazzi = Paparazzi(deviceConfig = PIXEL_3, useDeviceResolution = true)
 
   @Test
   fun pixel3() {
@@ -76,6 +77,8 @@ class LaunchViewTest {
 
   @Test
   fun launchComposable() {
+      paparazzi.unsafeUpdateConfig(deviceConfig = NEXUS_5.copy(screenHeight = 8000),
+                                   renderingMode = SHRINK)
       paparazzi.snapshot {
           MaterialTheme {
               Surface {
