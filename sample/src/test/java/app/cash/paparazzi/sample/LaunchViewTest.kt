@@ -44,7 +44,7 @@ import androidx.compose.foundation.layout.Column
 
 class LaunchViewTest {
   @get:Rule
-  val paparazzi = Paparazzi(deviceConfig = PIXEL_3)
+  val paparazzi = Paparazzi(deviceConfig = PIXEL_3, useDeviceResolution = true)
 
   @Test
   fun pixel3() {
