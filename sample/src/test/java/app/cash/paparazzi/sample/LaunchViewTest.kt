@@ -22,6 +22,25 @@ import com.android.resources.ScreenOrientation.LANDSCAPE
 import app.cash.paparazzi.Paparazzi
 import org.junit.Rule
 import org.junit.Test
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.requiredHeight
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.TileMode
+import androidx.compose.ui.unit.dp
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.material.Surface
+import androidx.compose.foundation.layout.Column
 
 class LaunchViewTest {
   @get:Rule
@@ -53,5 +72,24 @@ class LaunchViewTest {
     paparazzi.unsafeUpdateConfig(deviceConfig = NEXUS_5.copy(orientation = LANDSCAPE))
     launch = paparazzi.inflate(R.layout.launch)
     paparazzi.snapshot(launch, "landscape")
+  }
+
+  @Test
+  fun launchComposable() {
+      paparazzi.snapshot {
+          MaterialTheme {
+              Surface {
+                  Column(
+                      modifier = Modifier
+                          .fillMaxSize()
+                          .verticalScroll(rememberScrollState())
+                  ) {
+                      repeat(100) {
+                          Text(text = "Hello $it")
+                      }
+                  }
+              }
+          }
+      }
   }
 }
