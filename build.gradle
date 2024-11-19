@@ -45,6 +45,8 @@ subprojects {
             // You don't need to add this unless you need to
             // disambiguate gradle plugins for multiple repositories.
             channelPrefix "paparazzi-example"
+
+            extraArgs ["--verbose"]
         }
     }
 
