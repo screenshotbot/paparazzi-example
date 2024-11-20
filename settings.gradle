@@ -1,10 +1,10 @@
 pluginManagement {
     repositories {
         mavenLocal()
-        gradlePluginPortal()
         maven {
             url "/home/arnold/builds/screenshotbot-gradle/localRepo"
         }
+        gradlePluginPortal()
     }
 }
 
