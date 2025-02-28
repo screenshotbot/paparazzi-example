@@ -23,7 +23,7 @@ buildscript {
 }
 
 plugins {
-    id 'io.screenshotbot.plugin' version '1.22'
+    id 'io.screenshotbot.plugin' version '1.28'
 }
 
 allprojects {
