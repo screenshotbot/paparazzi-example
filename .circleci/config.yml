@@ -10,9 +10,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run tests
-          command: ./gradlew :sample:recordPaparazziDebug
-      - run:
           name: Run screenshotbot on all sub-modules
           # This Gradle task is created from the
           # io.screenshotbot.gradle plugin.
